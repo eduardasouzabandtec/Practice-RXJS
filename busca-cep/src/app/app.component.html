@@ -5,7 +5,7 @@
         <app-input (clickForm)="onForm($event)"></app-input>
     </div>
     
-    <div class="container__dados">
+    <div class="container__dados" *ngIf="cepzinho">
         <app-dados cep="{{ cepzinho }}"></app-dados>
     </div>
 

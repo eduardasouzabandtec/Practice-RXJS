@@ -21,13 +21,6 @@ export class AppInputComponent implements OnInit {
     event.preventDefault();
     const obs = this.service.getCep(this.cep)
       .subscribe(dados => this.clickForm.emit(JSON.stringify(dados)));
-
-    setTimeout(() => {
-      obs.unsubscribe()
-    }, 1000);
-
-
-
   }
 
 }

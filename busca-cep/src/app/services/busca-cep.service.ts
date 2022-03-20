@@ -13,6 +13,6 @@ export class BuscaCepService {
 
   getCep(cep:string) {
     let url = `https://viacep.com.br/ws/${cep}//json/`
-    return this.http.get<String>(url)
+    return this.http.get<string>(url)
   }
 }
