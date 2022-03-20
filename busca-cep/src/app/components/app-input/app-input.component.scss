@@ -1,0 +1,24 @@
+form {
+
+    input{
+        padding-left: 20px;
+        color: white;
+        background-color: hsl(235, 24%, 19%);
+        border: none;
+        height: 35px;
+        width: 100%;
+        
+        :focus {
+            box-shadow: 0 0 0 0;
+            text-transform: capitalize;
+            outline: 0;
+            background-color: hsl(235, 24%, 19%);
+        }
+        ::placeholder {
+            color: white;
+        }
+    }
+    input[type=number]::-webkit-inner-spin-button { 
+        -webkit-appearance: none;
+    }
+}

@@ -1,0 +1,19 @@
+.container__dados {
+    background-color:  hsl(235, 24%, 19%);
+    color: hsl(236, 33%, 92%);
+    border: 1px solid #C0C0C0;
+    border-radius: 10px;
+    padding: 6px;
+
+    & h2 {
+        text-align: center;
+    }
+    & p {
+        font-size: 14px;
+    }
+    & span {
+        color: #C0C0C0;
+        font-size: 12px;
+        margin: 20px;
+    }
+}
