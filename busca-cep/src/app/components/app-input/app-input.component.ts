@@ -9,18 +9,26 @@ import { BuscaCepService } from 'src/app/services/busca-cep.service';
 })
 export class AppInputComponent implements OnInit {
   @Output() clickForm = new EventEmitter();
-  cep: any = '';
-  dadosCep: any;
+  cep: string = ''
+  dadosCep: string = ''
 
-  constructor(private service: BuscaCepService) { }
+  constructor(
+    private service: BuscaCepService
+    ) {
+    
+   }
 
   ngOnInit(): void {
   }
 
-  submit(event: any) {
+  submit(event: SubmitEvent){
     event.preventDefault();
-    const obs = this.service.getCep(this.cep)
-      .subscribe(dados => this.clickForm.emit(JSON.stringify(dados)));
+    this.service.getCep(this.cep)
+      .subscribe((dados : string) =>  this.emitClick(dados));
+  }
+  emitClick(dados: string) {
+    this.clickForm.emit(dados);
   }
 
 }
+ 

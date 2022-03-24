@@ -7,10 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   @Input() values :any;
-  cepzinho:any;
+  cepzinho:string = '';
 
 
   onForm(dados:any){
-    this.cepzinho = dados
+    this.cepzinho = dados;
   }
 }
